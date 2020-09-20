@@ -15,7 +15,7 @@ return {...prevValue,
 }
 return (
  <div>
-<form>
+<form autocomplete="off">
         <input name="title" placeholder="Title"  value={notes.title} onChange={handleChange}/>
         <textarea name="content" placeholder="Take a note..." rows="3" value={notes.content} onChange={handleChange} />
         <button onClick= {(event)=>
