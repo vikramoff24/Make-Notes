@@ -3,10 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-
-
 function App() {
-
 const [notesArr,addNotesArr]=useState([])
 
   function handleClick(notes)
@@ -19,17 +16,14 @@ const [notesArr,addNotesArr]=useState([])
     })
     console.log(notesArr);
   }
-
-
-
-  return (
+return (
     <div>
       <Header />
       <CreateArea  onClicked={handleClick} />
-      <Note key={1} title="Note title" content="Note content" />
+      {notesArr.map((notes)=>  <Note key={1} title={notes.title} content={notes.content} /> )}
+    
       <Footer />
     </div>
   );
 }
-
 export default App;
