@@ -16,11 +16,20 @@ const [notesArr,addNotesArr]=useState([])
     })
     console.log(notesArr);
   }
+  
+  function deleteNotes(id)
+  {
+return notesArr.filter((notes,index)=>
+{
+return index!==id
+})
+  }
+  
 return (
     <div>
       <Header />
       <CreateArea  onClicked={handleClick} />
-      {notesArr.map((notes)=>  <Note key={1} title={notes.title} content={notes.content} /> )}
+      {notesArr.map((notes,index)=>  <Note key={index} id= {index} title={notes.title} content={notes.content} onClicked={deleteNotes }/> )}
     
       <Footer />
     </div>
