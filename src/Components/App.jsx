@@ -19,8 +19,7 @@ const [notesArr,addNotesArr]=useState([])
 return (
     <div>
       <Header />
-      <CreateArea  onClicked={handleClick} />
-      {notesArr.map((notes)=>  <Note key={1} title={notes.title} content={notes.content} /> )}
+     
     
       <Footer />
     </div>
