@@ -19,10 +19,10 @@ const [notesArr,addNotesArr]=useState([])
   
   function deleteNotes(id)
   {
-return notesArr.filter((notes,index)=>
+addNotesArr(notesArr.filter((notes,index)=>
 {
-return index!==id
-})
+return index!==id;
+}));
   }
   
 return (
