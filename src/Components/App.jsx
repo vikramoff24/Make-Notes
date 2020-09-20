@@ -5,8 +5,7 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 function App() {
 const [notesArr,addNotesArr]=useState([])
-
-  function handleClick(notes)
+function handleClick(notes)
   {
   addNotesArr(prevValue=>
     {
@@ -14,9 +13,7 @@ const [notesArr,addNotesArr]=useState([])
         notes
       ]
     })
-    console.log(notesArr);
   }
-  
   function deleteNotes(id)
   {
 addNotesArr(notesArr.filter((notes,index)=>
@@ -24,8 +21,7 @@ addNotesArr(notesArr.filter((notes,index)=>
 return index!==id;
 }));
   }
-  
-return (
+  return (
     <div>
       <Header />
       <CreateArea  onClicked={handleClick} />
