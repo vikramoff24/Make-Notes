@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import AddIcon from '@material-ui/icons/Add';
+import Fab from '@material-ui/core/Fab';
 function CreateArea(props) {
     const [notes,setNotes]=useState({
         title:"",
@@ -15,10 +16,10 @@ return {...prevValue,
 }
 return (
  <div>
-<form autocomplete="off" className="create-note">
+<form autocomplete="off" className= "create-note">
         <input name="title" placeholder="Title"  value={notes.title} onChange={handleChange}/>
         <textarea name="content" placeholder="Take a note..." rows="3" value={notes.content} onChange={handleChange} />
-        <button onClick= {(event)=>
+        <Fab onClick= {(event)=>
         {
             props.onClicked(notes);
             setNotes({
@@ -26,7 +27,7 @@ return (
                 content:"" 
             });
 event.preventDefault();
-}}><AddIcon/></button>
+}}><AddIcon/></Fab>
       </form>
     </div>
   );
