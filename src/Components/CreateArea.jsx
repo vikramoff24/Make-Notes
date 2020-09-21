@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-
+import AddIcon from '@material-ui/icons/Add';
 function CreateArea(props) {
     const [notes,setNotes]=useState({
         title:"",
@@ -26,7 +26,7 @@ return (
                 content:"" 
             });
 event.preventDefault();
-}}>Add</button>
+}}><AddIcon/></button>
       </form>
     </div>
   );
