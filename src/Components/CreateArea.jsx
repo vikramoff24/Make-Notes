@@ -20,11 +20,6 @@ return {...prevValue,
       setBool(true);
     }
 }
-
-function handleClick()
-{
-
-}
 return (
  <div>
 <form autocomplete="off" className= "create-note">
